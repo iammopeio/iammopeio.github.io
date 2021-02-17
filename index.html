@@ -3,19 +3,54 @@
 <html lang="en">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Example site</title>
+  <title>Main website</title>
   <style>
     body {
-      background-color: #000;
-      color: white;
+      margin: 0;
     }
-    h1 {
-      text-align: center;
-    }
+	#gamearea {
+	  position: fixed;
+      bottom: 0px;
+      right: 0px;
+      width: 100%;
+      border: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      height: 100%;
+	}
+	#sliderui {
+	  top: -100%;
+	  left: 0px;
+	  background-image: url("C:\\HTML\\Image13.png");
+	  position: absolute;
+	  border: none;
+	  margin: 0;
+      padding: 0;
+	  overflow: hidden;
+	  width: 100%;
+	  height: 100%;
+	  animation: sliderfade 5s ease-out;
+	}
+	@keyframes sliderfade {
+	  0% {
+	    top: 0px;
+		left: 0px;
+	  }
+	  75% {
+	    top: 0px;
+		left: 0px;
+	  }
+	  100% {
+	    top: -100%;
+		left: 0px;
+	  }
+	}
   </style>
 </head>
 
 <body>
-  <h1>This is a Example site</h1>
+  <iframe id="gamearea" src="https://mope.io"></iframe>
+  <div id="sliderui"></div>
 </body>
 </html>
